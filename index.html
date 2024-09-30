@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Oncollaboration</title>
+    author
 </head>
 
 <body>
-    <header>
+    <header class="navbar">
         <img src="https://placehold.co/150x150" alt=""><!-- logo -->
         <nav>
             <ul> <!-- navigatie -->
                 <li>
                     <a href="#">Webinars</a>
-                    <ul> <!--submenu -->
+                    <ul class="submenu"> <!--submenu -->
                         <li><a href="#">Webinar</a></li>
                         <li><a href="#">Speaker</a></li>
                         <li><a href="#">Q&A</a></li>
@@ -22,8 +23,10 @@
                 </li>
                 <li>
                     <a href="#">CT scans</a>
-                    <ul>
-                        <li><a href="#">Q&A</a></li> <!-- submenu -->
+                    <ul><!-- submenu -->
+                        <li>
+                            <a href="#">Q&A</a>
+                        </li> 
                         <li>
                             <a href="#">Case</a>
                             <ul>
@@ -37,50 +40,51 @@
         </nav>
     </header>
     <main>
-        <section> <!-- begin sectie -->
-            <div>
-                <h1>titel</h1>
-                <p></p>
-                <button><a href="">click me </a></button>
-            </div>
-            <div>
+        <section class="intro"> <!-- begin sectie -->
+            <article>
+                <h1>Oncollaboration</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, perspiciatis totam veritatis doloribus corrupti, alias aperiam ea quibusdam dignissimos incidunt expedita quidem molestiae distinctio. Quia sequi libero molestiae esse ab.</p>
+                <button>click me</button>
+            </article>
+            <figure> 
                 <img src="https://placehold.co/800x500" alt="placeholder">
-            </div>
+            </figure>
         </section>
-        <section>
-            <h2>title h2</h2>
-            <div> <!-- container voor de categorie buttons -->
-                <button>button</button>
-                <button>button</button>
-                <button>button</button>
-                <button>button</button>
-                <button>button</button>
-                <button>button</button>
-                <button>button</button>
+
+        <section class="webinar-overview">
+            <h2>Webinars</h2>
+            <div class="category-wrapper"> <!-- container voor de categorie buttons -->
+                <button class="cat-button">button</button>
+                <button class="cat-button">button</button>
+                <button class="cat-button">button</button>
+                <button class="cat-button">button</button>
+                <button class="cat-button">button</button>
+                <button class="cat-button">button</button>
+                <button class="cat-button">button</button>
             </div>
             <div>
-                <article>
+                <article class="webinar-article">
                     <img src="https://placehold.co/350x200" alt="placeholder">
                     <h3>article heading</h3>
                     <p>test</p>
                     <button>button</button>
                     <a href="">link</a>
                 </article>
-                <article>
+                <article class="webinar-article">
                     <img src="https://placehold.co/350x200" alt="placeholder">
                     <h3>article heading</h3>
                     <p>test</p>
                     <button>button</button>
                     <a href="">link</a>
                 </article>
-                <article>
+                <article class="webinar-article">
                     <img src="https://placehold.co/350x200" alt="placeholder">
                     <h3>article heading</h3>
                     <p>test</p>
                     <button>button</button>
                     <a href="">link</a>
                 </article>
-                <article>
+                <article class="webinar-article">
                     <img src="https://placehold.co/350x200" alt="placeholder">
                     <h3>article heading</h3>
                     <p>test</p>
@@ -89,22 +93,22 @@
                 </article>
             </div>
         </section>
-        <section>
+        <section class="contouring-overview">
 
             <h2>title h2</h2>
-            <article> <!-- articles ove onderzoeken -->
+            <article class="contouring"> <!-- articles over onderzoeken -->
                 <img src="https://placehold.co/500x500" alt="placeholder">
                 <h3>article heading</h3>
                 <p>test</p>
             </article>
 
-            <article>
+            <article class="contouring">
                 <img src="https://placehold.co/500x500" alt="placeholder">
                 <h3>article heading</h3>
                 <p>test</p>
             </article>
 
-            <article>
+            <article class="contouring">
                 <img src="https://placehold.co/500x500" alt="placeholder">
                 <h3>article heading</h3>
                 <p>test</p>
