@@ -1,1 +1,249 @@
-/* CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkred: #6A0025;
+    --white: #f5f5f5;
+    --lightred: #F0E5E9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: var(--lightred);
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+ol,ul{
+    list-style: none;
+    li{
+        color: var(--white);
+    }
+}
+
+h1 {
+    font-size: 45px;
+    color: var(--darkred);
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header en navigatie */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--darkred);
+    /* Header achtergrondkleur */
+}
+
+.navbar img {
+    height: 50px;
+    /* Logo grootte */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li ul {
+    /* submenus */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--darkred);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar nav ul li:hover ul {
+    display: block;
+}
+
+.navbar nav ul li ul li {
+    padding: 10px 20px;
+}
+
+/* Intro sectie */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.intro p {
+    max-width: 600px;
+}
+
+.intro figure {
+    max-width: 800px;
+}
+
+/* Webinar overzicht */
+.webinar-overview {
+    padding: 50px;
+}
+
+.webinar-overview h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width:900px) {
+        justify-content: start;
+    }
+}
+
+.cat-button {
+    /* webniars buttons */
+    padding: 10px 20px;
+    border: 2px solid var(--darkred);
+    color: var(--white);
+    background-color: var(--darkred);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cat-button:hover {
+    background-color: var(--white);
+    color: var(--darkred);
+}
+
+.webinar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media screen and (min-width:1050px) {
+        flex-direction: row;
+    }
+}
+
+.webinar-article {
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 25rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    @media screen and(min-width:900px) {
+        width: 40rem;
+    }
+    img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    h3 {
+        padding: 5px 20px;
+    }
+
+    p {
+        padding: 15px 20px;
+    }
+}
+
+.webinar-article button {
+    background-color: var(--darkred);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.webinar-article a {
+    color: var(--darkred);
+    margin-left: 15px;
+}
+
+/* Contouring overzicht */
+.contouring-overview {
+    padding: 50px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+}
+
+.contouring-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contouring {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contouring img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--darkred);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    li{
+        cursor: pointer;
+    }
+}
