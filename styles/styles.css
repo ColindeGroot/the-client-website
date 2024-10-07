@@ -1,13 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --darkred: #6A0025;
     --white: #f5f5f5;
     --lightred: #F0E5E9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -32,6 +32,7 @@ h1 {
 
 h2 {
     font-size: 35px;
+    padding-bottom: 30px;
 }
 
 h3 {
@@ -48,6 +49,10 @@ img {
     height: auto;
 }
 
+.wrappers{ /*sections die een padding mogen*/
+    padding: 50px 3vw;
+} 
+
 /* Header en navigatie */
 .navbar {
     display: flex;
@@ -56,22 +61,20 @@ img {
     padding: 20px;
     background-color: var(--darkred);
     /* Header achtergrondkleur */
-}
-
-.navbar img {
-    height: 50px;
-    /* Logo grootte */
+    img{
+        height: 50px;
+    }
 }
 
 .navbar nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    li{
+        position: relative;
+    }
 }
 
-.navbar nav ul li {
-    position: relative;
-}
 
 .navbar nav ul li ul {
     /* submenus */
@@ -95,28 +98,23 @@ img {
 /* Intro sectie */
 .intro {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
     justify-content: space-between;
-    padding: 50px;
-}
+    padding: 50px 3vw;
 
-.intro p {
-    max-width: 600px;
-}
+    @media (min-width:1050px) { 
+        flex-direction: row; 
+    }
 
-.intro figure {
-    max-width: 800px;
+    p{ max-width: 600px; }
+    figure{ max-width: 800px; }
+
+    
 }
 
 /* Webinar overzicht */
-.webinar-overview {
-    padding: 50px;
-}
-
-.webinar-overview h2 {
-    margin-bottom: 30px;
-    color: #333;
-}
 
 .category-wrapper {
     display: flex;
@@ -131,7 +129,7 @@ img {
 }
 
 .cat-button {
-    /* webniars buttons */
+    /* webinars buttons */
     padding: 10px 20px;
     border: 2px solid var(--darkred);
     color: var(--white);
@@ -148,37 +146,33 @@ img {
 
 .webinar-wrapper {
     display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
 
-    @media screen and (min-width:1050px)    {
+    @media (min-width:1050px) {
         flex-flow: row wrap;
+        justify-content: space-between;
     }
 }
 
 .webinar-article {
     background-color: white;
     border: 1px solid #ddd;
-    width: 25rem;
+    width: 15rem;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    @media screen and(min-width:900px) {
-        width: 40rem;
+
+    @media (min-width:900px) {
+        width: 22%;
     }
+
     img {
         width: 100%;
         border-radius: 10px 10px 0 0;
-    }
-
-    h3 {
-        padding: 5px 20px;
-    }
-
-    p {
-        padding: 15px 20px;
     }
 }
 
@@ -196,54 +190,69 @@ img {
     margin-left: 15px;
 }
 
-/* Contouring overzicht */
-.contouring-overview {
-    padding: 50px;
-
-    h2 {
-        margin-bottom: 30px;
-    }
-}
-
 .contouring-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1em;
+
+    @media (min-width:1050px) {
+        flex-flow: row wrap;
+        justify-content: start;
+        gap: 2em;
+    }
 }
 
 .contouring {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 30rem;
-    background-color: var(--white);
-    padding: 20px;
+    max-width: 70%;
     border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    @media (min-width: 1050px) {
+        max-width: 30%;
+    }
 }
 
-.contouring img {
+.image-container {
+    position: relative; /* Voor positionering van het label op de afbeelding */
     width: 100%;
     height: auto;
-    border-radius: 10px;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
 }
 
+.label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
 
 /* Footer */
 footer {
     background-color: var(--darkred);
-    color: white;
+    color: var(--white);
     padding: 20px;
     text-align: center;
-}
 
-footer ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    li{
-        cursor: pointer;
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+       
+        li{
+            cursor: pointer;
+        }
     }
 }
+
