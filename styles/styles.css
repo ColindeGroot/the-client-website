@@ -1,7 +1,7 @@
 :root {
     --darkred: #6A0025;
     --accentred: rgba(106, 0, 37, 0.502);
-    --white: #f5f5f5;
+    --white: #fff;
     --lightred: #F0E5E9;
 }
 
@@ -90,21 +90,21 @@ img {
     list-style: none;
     display: flex;
     gap: 20px;
-}
+    
+    li{ 
+        position: relative;
+     }
 
-.nav-links li {
-    position: relative;
-}
-
-.nav-links li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 8rem;
-    background-color: var(--darkred);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 8rem;
+        background-color: var(--darkred);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
 }
 
 .nav-links li:hover ul {
@@ -156,13 +156,17 @@ img {
     }
 
     p{ 
-        max-width: 600px;
+        max-width: 700px;
         margin:20px 0;
     }
 
     figure{ 
-        max-width: 800px;
-        order: 2;
+        max-width:700px;
+        
+        img{
+            filter:blur(0.5px) grayscale(30%) ;
+            border-radius: 0.8em;
+        }
     }
 
     
@@ -276,7 +280,7 @@ img {
     flex-flow: row wrap;
     justify-content: start;
     align-items: center;
-    gap: 1em;
+    gap: 1.5rem;
 
 
 }
@@ -288,7 +292,7 @@ img {
     border-radius: 10px;
 
     @media (min-width: 950px) {
-        max-width: 23%;
+        max-width: 20%;
     }
 }
 
@@ -306,10 +310,13 @@ img {
 
 .label {
     position: absolute;
+    font-weight: 700;
     bottom: 10px;
+    font-size: 14px;
     right: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    background-color: var(--lightred);
+    color: var(--darkred);
+    text-transform: uppercase;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
