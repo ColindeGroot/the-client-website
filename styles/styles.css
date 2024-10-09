@@ -37,7 +37,10 @@ h2 {
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 20px;
+    @media (min-width:800px) {
+        font-size: 25px;
+    }
 }
 
 a {
@@ -51,51 +54,94 @@ img {
 }
 
 .wrappers{ /*sections die een padding mogen*/
-    padding: 50px 3vw;
+    padding: 50px 5vw;
 } 
 
-/* Header en navigatie */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 5vw;
     background-color: var(--darkred);
-    /* Header achtergrondkleur */
-    img{
-        height: 50px;
-    }
 }
 
-.navbar nav ul {
+.navbar img {
+    height: 50px;
+}
+
+/* Hamburger menu styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-    li{
-        position: relative;
-    }
 }
 
+.nav-links li {
+    position: relative;
+}
 
-.navbar nav ul li ul {
-    /* submenus */
+.nav-links li ul {
     display: none;
     position: absolute;
     top: 100%;
-    width: 8rem;
     left: 0;
+    width: 8rem;
     background-color: var(--darkred);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
 
-.navbar nav ul li:hover ul {
+.nav-links li:hover ul {
     display: block;
 }
 
-.navbar nav ul li ul li {
+.nav-links li ul li {
     padding: 10px 20px;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--darkred);
+        width: 100%;
+        height: 20vh;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
 
 /* Intro sectie */
 .intro {
@@ -104,14 +150,20 @@ img {
     align-items: center;
     gap: 1rem;
     justify-content: space-between;
-    padding: 50px 3vw;
 
     @media (min-width:1050px) { 
         flex-direction: row; 
     }
 
-    p{ max-width: 600px; }
-    figure{ max-width: 800px; }
+    p{ 
+        max-width: 600px;
+        margin:20px 0;
+    }
+
+    figure{ 
+        max-width: 800px;
+        order: 2;
+    }
 
     
 }
@@ -221,26 +273,22 @@ img {
 
 .contouring-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: start;
     align-items: center;
     gap: 1em;
 
-    @media (min-width:1050px) {
-        flex-flow: row wrap;
-        justify-content: start;
-        gap: 2em;
-    }
+
 }
 
 .contouring {
     display: flex;
     flex-direction: column;
-    max-width: 70%;
+    max-width: 20rem;
     border-radius: 10px;
 
-    @media (min-width: 1050px) {
-        max-width: 30%;
+    @media (min-width: 950px) {
+        max-width: 23%;
     }
 }
 
