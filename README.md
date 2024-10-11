@@ -23,6 +23,7 @@ Op de homepage krijgt de gebruiker gelijk een overzicht te zien met een introduc
 
 ##### Intro
 De intro laat in het design het recente nieuws zien zoals een nieuwe webinar die gepost is of een belangerijk artikel. Dit is aangepast naar een introductie zodat de gebruiker een welkom krijgt en meer informatie krijgt over de pagina.
+![127 0 0 1_5500_the-client-website_index html (5)](https://github.com/user-attachments/assets/560c4447-6d2b-44fd-b347-7b2ce4b84c44)
 
 ##### Webinars
 De webinars sectie laat de meest recente webinars zien met filter knoppen om de juiste webinar te tonen.
