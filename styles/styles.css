@@ -19,9 +19,11 @@ body {
     font-size: 18px;
 }
 
-ol,ul{
+ol,
+ul {
     list-style: none;
-    li{
+
+    li {
         color: var(--white);
     }
 }
@@ -38,12 +40,13 @@ h2 {
 
 h3 {
     font-size: 20px;
+
     @media (min-width:800px) {
         font-size: 25px;
     }
 }
 
-a {
+a { 
     text-decoration: none;
     color: inherit;
 }
@@ -53,9 +56,10 @@ img {
     height: auto;
 }
 
-.wrappers{ /*sections die een padding mogen*/
+.wrappers {
+    /*sections die een padding mogen*/
     padding: 50px 5vw;
-} 
+}
 
 .navbar {
     display: flex;
@@ -90,10 +94,10 @@ img {
     list-style: none;
     display: flex;
     gap: 20px;
-    
-    li{ 
+
+    li {
         position: relative;
-     }
+    }
 
     li ul {
         display: none;
@@ -151,25 +155,25 @@ img {
     gap: 1rem;
     justify-content: space-between;
 
-    @media (min-width:1050px) { 
-        flex-direction: row; 
+    @media (min-width:1050px) {
+        flex-direction: row;
     }
 
-    p{ 
+    p {
         max-width: 700px;
-        margin:20px 0;
+        margin: 20px 0;
     }
 
-    figure{ 
-        max-width:700px;
-        
-        img{
-            filter:blur(0.5px) grayscale(30%) ;
+    figure {
+        max-width: 700px;
+
+        img {
+            filter: blur(0.5px) grayscale(30%);
             border-radius: 0.8em;
         }
     }
 
-    
+
 }
 
 /* Webinar overzicht */
@@ -205,59 +209,62 @@ img {
 .webinar-wrapper {
     display: flex;
     flex-flow: row nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
+    scrollbar-color: var(--darkred) var(--lightred);     
     gap: 0.5rem;
+    width:92vw;
     justify-content: space-evenly;
     align-items: center;
 
     @media (min-width:1050px) {
-        gap: 0;
-        justify-content: space-between;
+        gap: 1rem;
+        justify-content: space-evenly;
     }
 }
 
 .webinar-article {
     border: 1px solid #ddd;
-    width: 80%;
+    width: 90%;
     margin-bottom: 20px;
+    flex-shrink: 0;
     border: 1px solid transparent;
     border-radius: 10px;
     padding-bottom: 1rem;
-    
-        @media (min-width:900px) {
-            width: 24%;
+
+    @media (min-width:900px) {
+        width: 25%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    *:not(img) {
+        padding: 0.3rem 0;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-size: 14px;
+            padding: 0.2rem 0.5rem;
+            align-self: center;
+            border-radius: 0.3rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            background-color: var(--accentred);
+            color: var(--white);
         }
 
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px 10px 0 0;
+        a {
+            font-weight: 700;
         }
+    }
 
-        *:not(img){
-            padding: 0.3rem 0;
-        }
-
-        div{
-            display: flex;
-            justify-content: space-between;
-            
-            span{
-                font-size: 14px;
-                padding: 0.2rem 0.5rem;
-                align-self:center ;
-                border-radius: 0.3rem;
-                text-transform: uppercase;
-                font-weight: 700;
-                background-color: var(--accentred);
-                color: var(--white);
-            }
-
-            a{
-                font-weight: 700;
-            }
-        }
-        
 }
 
 .webinar-article button {
@@ -277,10 +284,14 @@ img {
 .contouring-wrapper {
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
 
+    @media (min-width:1050px) {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 
 }
 
@@ -296,7 +307,8 @@ img {
 }
 
 .image-container {
-    position: relative; /* Voor positionering van het label op de afbeelding */
+    position: relative;
+    /* Voor positionering van het label op de afbeelding */
     width: 100%;
     height: auto;
 
@@ -332,10 +344,9 @@ footer {
         display: flex;
         justify-content: center;
         gap: 20px;
-       
-        li{
+
+        li {
             cursor: pointer;
         }
     }
 }
-
