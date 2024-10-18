@@ -36,6 +36,7 @@ h1 {
 h2 {
     font-size: 35px;
     padding-bottom: 30px;
+    color: var(--darkred);
 }
 
 h3 {
@@ -58,7 +59,11 @@ img {
 
 .wrappers {
     /*sections die een padding mogen*/
-    padding: 50px 5vw;
+    padding: 20px 5vw;
+
+    @media (min-width:800px){
+        padding: 50px 5vw;
+    }
 }
 
 .navbar {
@@ -102,6 +107,7 @@ img {
     li ul {
         display: none;
         position: absolute;
+        z-index: 9;
         top: 100%;
         left: 0;
         width: 8rem;
@@ -231,7 +237,11 @@ img {
     border-radius: 10px;
     padding-bottom: 1rem;
 
-    @media (min-width:900px) {
+    @media (min-width:550px) {
+        width: 50%;
+    }
+
+    @media (min-width:950px) {
         width: 25%;
     }
 
@@ -283,25 +293,29 @@ img {
 
 .contouring-wrapper {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    scrollbar-color: var(--darkred) var(--lightred); 
+    flex-flow: row nowrap;
+    justify-content: start;
     align-items: center;
     gap: 1.5rem;
-
-    @media (min-width:1050px) {
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+    width: 92vw;
+    overflow-x: auto;
 
 }
 
 .contouring {
     display: flex;
     flex-direction: column;
-    max-width: 20rem;
     border-radius: 10px;
+    width: 90%;
+    margin-bottom: 30px;
+    flex-shrink: 0;
 
-    @media (min-width: 950px) {
+    @media (min-width: 550px) {
+        max-width: 40%;
+    }
+
+    @media (min-width: 1050px) {
         max-width: 20%;
     }
 }
