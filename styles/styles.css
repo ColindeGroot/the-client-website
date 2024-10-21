@@ -226,14 +226,14 @@ img {
         gap: 1rem;
         justify-content: space-evenly;
     }
-}
+}     
 
 .webinar-article {
     border: 1px solid #ddd;
     width: 90%;
     margin-bottom: 20px;
     flex-shrink: 0;
-    border: 1px solid transparent;
+    border: 1px solid transparent;   
     border-radius: 10px;
     padding-bottom: 1rem;
 
@@ -253,7 +253,7 @@ img {
 
     *:not(img) {
         padding: 0.3rem 0;
-    }
+    }     
 
     div {
         display: flex;
@@ -266,7 +266,7 @@ img {
             border-radius: 0.3rem;
             text-transform: uppercase;
             font-weight: 700;
-            background-color: var(--accentred);
+            background-color: var(--darkred);
             color: var(--white);
         }
 
