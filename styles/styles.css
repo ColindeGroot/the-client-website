@@ -1,10 +1,3 @@
-:root {
-    --darkred: #6A0025;
-    --accentred: rgba(106, 0, 37, 0.502);
-    --white: #fff;
-    --lightred: #F0E5E9;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +10,30 @@ body {
     background-color: var(--lightred);
     line-height: 1.4;
     font-size: 18px;
+
+    /*colors*/
+    --darkred: #6A0025;
+    --accentred: #6a002580;
+    --white: #fff;
+    --lightred: #F0E5E9;
+
+    /* font familys */
+    --vag-rund: Arial, Helvetica, sans-serif;
+    --open-sans: "Open Sans";
+
+    /*font sizes*/
+    --font-size-xl: 2em;
+    --font-size-l: 1.2em;
+    --font-size-m: 1em;
+    --font-size-s: 0.875em;
+
+    /*font weight*/
+    --light: 400;
+    --normal: 500;
+    --bold: 600;
+
 }
+
 
 ol,
 ul {
@@ -41,13 +57,9 @@ h2 {
 
 h3 {
     font-size: 20px;
-
-    @media (min-width:800px) {
-        font-size: 25px;
-    }
 }
 
-a { 
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -61,7 +73,7 @@ img {
     /*sections die een padding mogen*/
     padding: 20px 5vw;
 
-    @media (min-width:800px){
+    @media (min-width:800px) {
         padding: 50px 5vw;
     }
 }
@@ -218,9 +230,9 @@ img {
     display: flex;
     flex-flow: row nowrap;
     overflow-x: auto;
-    scrollbar-color: var(--darkred) var(--lightred);     
+    scrollbar-color: var(--darkred) var(--lightred);
     gap: 0.5rem;
-    width:92vw;
+    width: 92vw;
     justify-content: space-evenly;
     align-items: center;
 
@@ -228,7 +240,7 @@ img {
         gap: 1rem;
         justify-content: space-evenly;
     }
-}     
+}
 
 
 .webinar-article {
@@ -236,7 +248,7 @@ img {
     width: 90%;
     margin-bottom: 20px;
     flex-shrink: 0;
-    border: 1px solid transparent;   
+    border: 1px solid transparent;
     border-radius: 10px;
     padding-bottom: 1rem;
 
@@ -256,7 +268,7 @@ img {
 
     *:not(img) {
         padding: 0.3rem 0;
-    }     
+    }
 
     div {
         display: flex;
@@ -296,7 +308,7 @@ img {
 
 .contouring-wrapper {
     display: flex;
-    scrollbar-color: var(--darkred) var(--lightred); 
+    scrollbar-color: var(--darkred) var(--lightred);
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
@@ -370,56 +382,66 @@ footer {
 
 /* webinar page */
 
-.latest{
+.latest {
     gap: 2rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    @media (min-width:999px){
-        flex-flow: row ;
+
+    @media (min-width:999px) {
+        flex-flow: row;
     }
-    .latest-left{
+
+    .latest-left {
         display: flex;
         width: 100%;
         height: 100%;
-        flex-direction:column;
+        flex-direction: column;
         align-items: space-between;
-        @media (min-width:999px){
+
+        @media (min-width:999px) {
             width: 40%;
         }
-        p{
+
+        p {
             margin: 2rem 0;
             width: 300px;
         }
-        .cat-button{
+
+        .cat-button {
             width: 9rem;
         }
     }
 
-    .latest-right{
+    .latest-right {
         width: 100%;
-        @media (min-width:999px){
+
+        @media (min-width:999px) {
             width: 40%;
         }
-        img{
+
+        img {
             width: 100%;
             height: auto;
-            @media (min-width:999px){
+
+            @media (min-width:999px) {
                 height: 100%;
                 object-fit: contain;
             }
         }
     }
-    
+
 }
 
-.webinar-container{  /*webinar page wrapper*/
+.webinar-container {
+    /*webinar page wrapper*/
     display: flex;
     flex-flow: row wrap;
     gap: 0.5em;
     justify-content: center;
     align-items: center;
-    @media (min-width:950px){
+
+    @media (min-width:950px) {
         justify-content: start;
     }
 }
