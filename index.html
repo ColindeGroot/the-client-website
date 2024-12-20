@@ -7,6 +7,7 @@
     <title>Oncollaboration</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/script.js" defer></script>
+    <script src="../semester1/look-and-feel-corporate-identity/filter.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,9 @@
 
         <nav aria-label="Hoofdmenu">
             <ul class="nav-links">
+                <li>
+                    <a href="https://colindegroot.github.io/the-client-website/"></a>
+                </li>
                 <li>
                     <a href="#">Webinars</a>
                     <ul class="submenu"> <!--submenu -->
@@ -81,9 +85,9 @@
                 </div>
             </nav>
 
-            <div class="webinar-wrapper">
-                <article class="webinar-article">
-                    <img src="assets/neurooncology.png" alt="placeholder">
+            <div class="webinar-wrapper" data-category="neuro-oncology">
+                <article class="webinar-article" >
+                    <img src="assets/neurooncology.png" alt="placeholder" >
                     <h3>IROS CME Webinar: Fractionation in Head..</h3>
                     <p>DR. Colin de Groot</p>
                     <div class="webinar-bottom">
@@ -92,8 +96,8 @@
                     </div>
                 </article>
 
-                <article class="webinar-article">
-                    <img src="assets/urology.png" alt="placeholder">
+                <article class="webinar-article" data-category="lung">
+                    <img src="assets/urology.png" alt="placeholder" >
                     <h3>TPL Group Updates & Exchange Forum: Upda</h3>
                     <p>DR. Colin de Groot</p>
                     <div class="webinar-bottom">
@@ -102,7 +106,7 @@
                     </div>
                 </article>
 
-                <article class="webinar-article">
+                <article class="webinar-article" data-category="breast">
                     <img src="assets/gynaecology.png" alt="placeholder">
                     <h3>IROS CME Webinar: Fractionation in Head..</h3>
                     <p>DR. Colin de Groot</p>
@@ -112,7 +116,7 @@
                     </div>
                 </article>
 
-                <article class="webinar-article">
+                <article class="webinar-article" data-category="neuro-oncology">
                     <img src="assets/gynaecology.png" alt="placeholder">
                     <h3>IROS CME Webinar: Fractionation in Head..</h3>
                     <p>DR. Colin de Groot</p>
